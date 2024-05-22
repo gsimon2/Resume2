@@ -94,6 +94,7 @@
 % Control list environment customization
 \usepackage{enumitem}
 
+\newcommand{\extLink}{{\footnotesize \faExternalLink*}}
 %-------------------------------------------------------------------------------
 %                            PERSONAL INFORMATION
 %-------------------------------------------------------------------------------
@@ -101,7 +102,7 @@
 % your name
 \cvname{Glen Simon}
 % job title/career
-\cvjobtitle{Software Engineer 2,\\[0.2em] Indeed Inc}
+\cvjobtitle{Senior Software Engineer,\\[0.2em] Indeed Inc}
 
 %% optional information
 % profile picture
@@ -127,33 +128,45 @@
 %-------------------------------------------------------------------------------
 % add more profile sections to sidebar on first page
 \addtofrontsidebar{
-	\profilesection{Languages}
-		\pointskill{\faCode}{TypeScript}{5}
-	    \pointskill{\faJs}{JavsScript}{4}
-    	\pointskill{\faIcon{html5}}{HTML / CSS}{4}
-	    \pointskill{\faCode}{C\#}{3}
-    	\pointskill{\faPython}{Python}{3}
+    \profilesection{Languages}
+        \skill{\faCode}{TypeScript}
+        \skill{\faJs}{JavaScript}
+        \skill{\faIcon{html5}}{HTML / CSS}
+        \skill{\faCode}{C\#}
+        \skill{\faPython}{Python}
+        
+        % Point skills
+        % \pointskill{\faCode}{TypeScript}{5}
+        % \pointskill{\faJs}{JavaScript}{4}
+        % \pointskill{\faIcon{html5}}{HTML / CSS}{4}
+        % \pointskill{\faCode}{C\#}{3}
+        % \pointskill{\faPython}{Python}{3}
     	
     	
     \profilesection{Technologies}
-        \textbf{Front-End:} React, Storybook, Apollo Client, Redux, Axios, Styled Components
-        
-        \textbf{Back-End:} .NetCore/Standard, Entity Framework Core, Swagger, Auth0, NodeJs, ExpressJs
-        
-        \textbf{Testing:} Jest, Testing Library, Test Cafe, Enzyme, Pa11y, Puppeteer, Moq
-        
-        \textbf{Tools:} Datadog, SonarQube, Chromatic, Azure Portal, Azure DevOps, Azure Application Insights, Visual Studio, Visual Studio Code, Lens
-        
-        \textbf{Other:} Git/Github/GitLab, Github Actions, Docker, Kubernetes, \LaTeX
 
-	\profilesection{Skills}
+        \aboutme{\textbf{Development:} React, Storybook, Apollo Client, MUI, Emotion, NextJs, GraphQL, I18n, Mock Service Worker}
+
+        % \aboutme{\textbf{Front-End:} React, Storybook, Apollo Client, MUI, NextJs, Redux, Styled Components}
+
+        % \aboutme{\textbf{Back-End:} GraphQL, .NET, Entity Framework Core, Swagger, Auth0, NodeJs, ExpressJs}
+        
+        \aboutme{\textbf{Testing:} Jest, Testing Library, Test Cafe, Chromatic, Enzyme, Pa11y, Puppeteer, Moq}
+        
+        \aboutme{\textbf{Tools:} Datadog, SonarQube, Chromatic, Vercel, Azure Portal, Azure DevOps, Azure Application Insights, Visual Studio, Visual Studio Code}
+        
+        \aboutme{\textbf{Other:} Git/Github/GitLab, Github Actions, Docker, Kubernetes, \LaTeX}
+
+    \profilesection{Skills}
         Leadership $\bullet$
-        Project management $\bullet$
-	    Collaboration $\bullet$
-	    Written \& Verbal Communication $\bullet$
-	    Problem-Solving $\bullet$
-	    Accountability $\bullet$
-	    Empathy
+        Project Management $\bullet$
+        User First Thinking $\bullet$
+        Collaboration $\bullet$
+        Mentorship $\bullet$
+        Written \& Verbal Communication $\bullet$
+        Problem-Solving $\bullet$
+        Accountability $\bullet$
+        Empathy
 }
 
 %-------------------------------------------------------------------------------
@@ -169,19 +182,28 @@
 \cvsection{Working Experience}
 \begin{cvtable}[0.5]
 
-	\cvitem{2022 - Now}{Software Engineer 2}{Indeed Inc}{
-	    \vspace{-1.75em}
-	    \begin{itemize}[leftmargin=-5.5em,label={}]
-            \item Developed and maintained an ecosystem of micro front-end modules that enhance job search, filtering, and selection experiences servicing over 4 million sessions a week.
-            \item Utilized a range of tools to ensure code quality and high quality user experiences resulting in an average of less than 0.25\% of sessions experiencing an error.
+    \cvitem{2024 - Now}{Senior Software Engineer}{Indeed Inc}{
+        \vspace{-1.75em}
+        \begin{itemize}[leftmargin=-5.5em,label={}]
+            \item Led a team of engineers with agile-style meetings and demonstrated proficiency in decomposing and managing complex tasks to drive simultaneous projects and meet deadlines effectively.
+            \item Promoted team learning and advancement by providing regular and frequent learning opportunities such as: topic deep dives, shadowing, code pairing sessions, and open office hours.
+            \item Collaborated cross team to deliver wide spanning, high priority initiatives that were considered business critical.
+        \end{itemize}
+    }
+
+    \cvitem{2022 - 2024}{Software Engineer 2}{Indeed Inc}{
+        \vspace{-1.75em}
+        \begin{itemize}[leftmargin=-5.5em,label={}]
+            \item Developed and maintained an ecosystem of reusable modules that enhance job search, filtering, selection, and grouping experiences that are used on over 15 product surfaces and service over 4 million sessions a week.
+            \item Focused simplicity and clarity with all deliverables leading to a fully documented, self-service integration style that was often commended for its ease of adoption.
+            \item Utilized a range of tools to ensure a high code quality and excellent user experiences resulting in an average of less than 0.25\% of sessions experiencing an error.
             \item Leveraged in-depth logging and custom dashboards for real-time usage and statistics monitoring, facilitating data-driven decision-making.
-            \item Led agile-style meetings and demonstrated proficiency in managing and decomposing complex tasks to drive projects and meet deadlines effectively.
         \end{itemize}
     }
     
-	\cvitem{2019 - 2022}{Software Engineer 2}{TechSmith Corporation}{
-	    \vspace{-1.75em}
-	    \begin{itemize}[leftmargin=-5.5em,label={}]
+    \cvitem{2019 - 2022}{Software Engineer 2}{TechSmith Corporation}{
+        \vspace{-1.75em}
+        \begin{itemize}[leftmargin=-5.5em,label={}]
             \item Developed websites, single page applications, micro front-end components, and component libraries.
             % \item Wrote comprehensive unit, integration, and accessibility tests.
             \item Created, extended, and maintained .Net APIs and web jobs.
@@ -220,7 +242,7 @@
 %%%%%%%%%%%% Projects %%%%%%%%%%%%%%%%%%%%%%%%
 \cvsection{Projects}
 \begin{cvtable}
-	\cvitem{2020 -- Now}{Foundry VTT Modules}{}{Developed and actively maintain free to use modules that add additional functionality to a popular virtual table top system. Remain active in the community to address bug reports, feature requests, and offer regular updates.}
+	\cvitem{2020 -- 2023}{\href{https://github.com/gsimon2/foundry-module-download-tracker}{Foundry VTT Modules \extLink}}{}{Developed and actively maintained free to use modules that add additional functionality to a popular virtual table top system. Remained active in the community to address bug reports, feature requests, and offer regular updates.}
 % 	\cvitem{2018}{Custom Fitbit Watch Face}{}{Designed a watch face using the Fitbit SDK that was compatible across available devices as a personal incentive to learn Javascript, CSS, and working with SVGs.}
 \end{cvtable}
 
@@ -229,12 +251,12 @@
 %%%%%%%%%%%% Publications %%%%%%%%%%%%%%%%%%%%
 \cvsection{Publications}
 \begin{cvtable}
-	\cvpubitem{Applying Evolution and Novelty Search to Enhance the Resilience of Autonomous Systems}
+	\cvpubitem{\href{https://github.com/gsimon2/EvoRos-Enki/blob/main/Enki___Evo_ROS_Integration.pdf}{Applying Evolution and Novelty Search to Enhance the Resilience of Autonomous Systems \extLink}}
     	{M. A. Langford, G. A. Simon, P. K. McKinley, and B. H. C. Cheng}
     	{\textit{IEEE/ACM 14th International Symposium on Software Engineering for Adaptive and Self-Managing Systems (SEAMS)}, Montreal, QC, Canada}
     	{2019}
 	
-	\cvpubitem{Evo-ROS: Integrating Evolution and the Robot Operating System}
+	\cvpubitem{\href{https://github.com/gsimon2/EvoRos-Paper/blob/main/EvoRos.pdf}{Evo-ROS: Integrating Evolution and the Robot Operating System \extLink}}
     	{G. A. Simon, J. M. Moore, A. J. Clark and P. K. McKinley}
     	{\textit{Proceedings of the Genetic and Evolutionary Computation Conference}, Kyoto, Japan}
     	{2018}
@@ -245,18 +267,20 @@
     	{2017}
 \end{cvtable}
 
+% Trim whitespace if it tries pushing to a new page
+\vspace{-5cm}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%% Presentations %%%%%%%%%%%%%%%%%%%%
-\cvsection{Presentations}
-\begin{cvtable}
-	\cvitemshort{2018}{X-PLORE / Evo-ROS Update 2, PI meeting for AFRL Resilient and Trusted Systems Program, Ann Arbor, MI}
-	\cvitemshort{2018}{Evo-ROS: Integrating Evolution and the Robot Operating System, Genetic and Evolutionary Computation Conference, Kyoto, Japan}
-	\cvitemshort{2017}{X-PLORE / Evo-ROS Update 1, PI meeting for AFRL Resilient and Trusted Systems Program, Miami, FL}
-	\cvitemshort{2017}{Evo-ROS: Applying Evolution to the Robot Operating System (poster summary), International Conference on Intelligent Robots and Systems (IROS), Vancouver, BC, Canada}
+% \cvsection{Presentations}
+% \begin{cvtable}
+% 	\cvitemshort{2018}{X-PLORE / Evo-ROS Update 2, PI meeting for AFRL Resilient and Trusted Systems Program, Ann Arbor, MI}
+% 	\cvitemshort{2018}{Evo-ROS: Integrating Evolution and the Robot Operating System, Genetic and Evolutionary Computation Conference, Kyoto, Japan}
+% 	\cvitemshort{2017}{X-PLORE / Evo-ROS Update 1, PI meeting for AFRL Resilient and Trusted Systems Program, Miami, FL}
+% 	\cvitemshort{2017}{Evo-ROS: Applying Evolution to the Robot Operating System (poster summary), International Conference on Intelligent Robots and Systems (IROS), Vancouver, BC, Canada}
 % 	\cvitemshort{2017}{Evo-ROS: Applying Evolution to the the Robot Operating System (poster summary), Michigan State University 
 %   Bio/Computational Evolution in Action CONsortium (BEACON) Congress, East Lansing, MI}
 % 	\cvitemshort{2017}{X-PLORE / Evo-ROS, PI meeting for AFRL Resilient and Trusted Systems Program, East Lansing, MI}
-\end{cvtable}
+% \end{cvtable}
 
 \end{document}
